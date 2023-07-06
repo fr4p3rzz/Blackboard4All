@@ -37,6 +37,7 @@ function CreateColorTile(x, y, color)
         fill: color,
         x: x,
         y: y,
+        stroke: black,
         opacity: startingOpacity
     }).moveTo(uiStaticLayer);
 
