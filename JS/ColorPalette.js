@@ -1,39 +1,11 @@
 // This is the order in which colors will be displayed. Colors are initialized on settings.js
-const colorPalette = [
-    white,
-    black,
-    blue,
-    violet,
-    green,
-    red,
-    yellow,
-    orange,
-    pink   
-];
 
-var tiles = [];
-
-// Initialize square with positions
-for(let i = 0, row = 0, col = 0; i < colorPalette.length; i++)
-{   
-    if(i == 0 || i % 3 != 0)
-    {
-        row++ 
-    }
-    else
-    {
-        col++;
-        row = 1;
-    }
-
-    CreateColorTile(initialX - (xPositionTranslate * row), initialY + (yPositionTranslate * col), colorPalette[i])
-}
 
 function CreateColorTile(x, y, color)
 {
     var tile = new Konva.Rect({
-        width: cPWidth,
-        height: cPHeight,
+        width: tileWidth,
+        height: tileHeight,
         fill: color,
         x: x,
         y: y,
